@@ -1,0 +1,129 @@
+/* Base styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(20, 20, 30, 0.85);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.2);
+  border-bottom: 2px solid rgba(0, 255, 255, 0.2);
+  position: fixed;
+  width: 97%;
+  height: 60px;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.8rem;
+  color: #0ff;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+}
+
+.navbar ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: #0ff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: right;
+}
+
+.navbar ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.navbar ul li a:hover {
+  color: #0ff;
+  text-shadow: 0 0 5px #0ff;
+}
+
+/* Burger Menu */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.line {
+  width: 25px;
+  height: 3px;
+  background: #0ff;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.line.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.line.open:nth-child(2) {
+  opacity: 0;
+}
+.line.open:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .navbar ul {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: rgba(20, 20, 30, 0.95);
+    flex-direction: column;
+    width: 88%;
+    padding: 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  .navbar ul.open {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .navbar ul li {
+    padding: 15px 0;
+    text-align: center;
+  }
+
+  .navbar .logo {
+    margin-left: 10px;
+  }
+}
+
+/* Optional animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
