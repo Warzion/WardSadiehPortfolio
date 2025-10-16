@@ -1,0 +1,120 @@
+Full background wrapper
+.connect-section {
+  background-color: #0f0f1a;
+  padding: 80px 20px;
+  min-height: 84vh;
+}
+
+.contact-form-container {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 30px 25px;
+  background-color: #0f0f1a;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.05), 0 0 60px rgba(0, 255, 255, 0.05) inset;
+  color: white;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.contact-form-container:hover {
+  transform: translateY(-10px);
+}
+
+.contact-form-container h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #0ff;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+}
+
+/* Input Fields */
+.form-group {
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 97%;
+  padding: 14px;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.05);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #aaa;
+}
+
+input:focus,
+textarea:focus {
+  background: rgba(0, 255, 255, 0.05);
+  outline: none;
+  border-color: #0ff;
+  box-shadow: 0 0 15px #0ff;
+}
+
+textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+/* Submit Button */
+.submit-button {
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid #0ff;
+  color: #0ff;
+  font-size: 18px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+.submit-button:hover {
+  background: rgba(0, 255, 255, 0.25);
+  box-shadow: 0 0 15px #0ff;
+  color: white;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+  color: transparent;
+}
+
+@media only screen and (max-width: 430px) {
+  .contact-form-container {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .contact-form-container h2 {
+    font-size: 1.8rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .submit-button {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+
+  textarea {
+    height: 120px;
+  }
+}
