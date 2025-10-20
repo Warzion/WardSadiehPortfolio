@@ -1,6 +1,7 @@
 import { FaLinkedin } from 'react-icons/fa';
 import { ReactTyped } from 'react-typed';
 import './Banner.css';
+import myImage from '/Images/WardPortfolio.png';
 
 const Banner = () => {
   return (
@@ -35,7 +36,7 @@ const Banner = () => {
       </div>
 
       <div className="image-div">
-        <img src="/Images/WardPortfolio.png" alt="Ward Sadieh" />
+        <img src={myImage} alt="Ward Sadieh" />
       </div>
     </div>
   );
