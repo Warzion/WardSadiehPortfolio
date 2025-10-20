@@ -1,7 +1,8 @@
 import { FaLinkedin } from 'react-icons/fa';
 import { ReactTyped } from 'react-typed';
 import './Banner.css';
-import myImage from '/Images/WardPortfolio.png';
+
+const myImage = ${import.meta.env.BASE_URL}Images/WardPortfolio.png;
 
 const Banner = () => {
   return (
